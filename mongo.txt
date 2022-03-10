@@ -1,0 +1,33 @@
+ mongo
+ show dbs
+ use assignment
+ db.createCollection("users")
+ show collections 
+ db.users.insertOne({"first_name":"kamal kishor","Last_name":"Rajput"})
+ db.users.insertOne({"first_name":"kamal kishor","Last_name":"Rajput","email":"kkr@gmail.com","gender":"male","ip_address":"2352456235","age":"24"})
+ db.users.insertOne({"first_name":"ankti","last_name":"kumar","email":"ankti@gmail.com","ip_address":"345354.345","age":"30"})
+ db.users.insertOne({"first_name":"anshuuiya","last_name":"kumari","email":"ansuiyai@gmail.com","ip_address":"3.45.354.345","age":"20"})
+    db.users.insertOne({"first_name":"anshuuiya","last_name":"kumari","email":"ansuiyai@gmail.com","ip_address":"3.45.354.345","age":"20"})
+
+
+    db.users.insertMany([{"first_name":"bhola","last_name":"singh","email":"bhola@gmail.com","ip_address":"3.45.354.345","age":"22"},
+    {"first_name":"priyanka","last_name":"kumari","email":"priyanka@gmail.com","ip_address":"3.45.354.345","age":"21"},
+    {"first_name":"aditya","last_name":"kumar","email":"aditya@gmail.com","ip_address":"3.45.354.345","age":"16"},
+    {"first_name":"aprajita","last_name":"kumari","email":"prajita@gmail.com","ip_address":"3.45.354.345","age":"13"},
+    {"first_name":"abhinav","last_name":"kumar","email":"abhinav@gmail.com","ip_address":"3.45.354.345","age":"35"},
+    {"first_name":"aakansha","last_name":"kumari","email":"akansha@gmail.com","ip_address":"3.45.354.345","age":"27"},
+    {"first_name":"rahul","last_name":"kumar","email":"rahul@gmail.com","ip_address":"3.45.354.345","age":"29"},
+    {"first_name":"pankaj","last_name":"kumar","email":"pankaj@gmail.com","ip_address":"3.45.354.345","age":"45"},
+    {"first_name":"dinesh","last_name":"kumar","email":"dinesh@gmail.com","ip_address":"3.45.354.345","age":"76"}])
+
+    db.users.find()
+
+    db.users.find().pretty()
+
+    db.users.findOne({"first_name":"pankaj"})
+
+    db.users.update({"first_name":"pankaj"},{$set:{"city":"kanpur"}})
+
+    db.users.updateMany({"ip_address" : "3.45.354.345"},{$set:{"city":"new delhi"}})
+
+    db.users.deleteOne({"name":"pankaj"})
