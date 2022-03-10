@@ -31,3 +31,5 @@
     db.users.updateMany({"ip_address" : "3.45.354.345"},{$set:{"city":"new delhi"}})
 
     db.users.deleteOne({"name":"pankaj"})
+
+    db.dropDatabase()
